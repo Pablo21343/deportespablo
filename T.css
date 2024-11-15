@@ -1,0 +1,293 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+header {
+    background-color: #0044cc;
+    padding: 20px 0;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo a {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+header .logo a:hover {
+    transform: scale(1.1);
+}
+
+header .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+header .nav-links li {
+    margin-left: 20px;
+}
+
+header .nav-links a {
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+header .nav-links a:hover {
+    color: #f4f4f4;
+    text-decoration: underline;
+}
+
+.hero {
+    background: url('Fondo\ del\ Tenis.jpg') no-repeat center center/cover;
+    padding: 100px 0;
+    color: white;
+    text-align: center;
+    animation: slideIn 2s ease-out;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    animation: fadeUp 1.5s ease-out;
+}
+
+.hero-text p {
+    font-size: 24px;
+    margin-bottom: 30px;
+    animation: fadeUp 2s ease-out;
+}
+
+.cta-button {
+    padding: 15px 30px;
+    background-color: #ff9900;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #ff6600;
+    transform: translateY(-5px);
+}
+
+
+.section {
+    padding: 60px 0;
+    animation: fadeInUp 2s ease-out;
+}
+
+.bg-light {
+    background-color: #f9f9f9;
+}
+
+.news-cards, .player-cards, .shop-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.news-card, .player-card, .shop-card {
+    width: 30%;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-card:hover, .player-card:hover, .shop-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.news-card img, .player-card img, .shop-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.news-card a, .shop-card a {
+    color: #0044cc;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.news-card a:hover, .shop-card a:hover {
+    color: #ff9900;
+}
+
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 15px 30px;
+    background-color: #0044cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+form button:hover {
+    background-color: #003399;
+    transform: translateY(-3px);
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+@media (max-width: 970px) {
+    .desktop {
+        display: none;
+    }
+    .tablet {
+        display: block;
+    }
+
+    .hero-text h1 {
+        font-size: 36px;
+    }
+
+    .hero-text p {
+        font-size: 20px;
+    }
+
+    .news-cards, .player-cards, .shop-cards {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .news-card, .player-card, .shop-card {
+        width: 100%;
+    }
+
+    .cta-button {
+        padding: 12px 25px;
+        font-size: 16px;
+    }
+
+    form button {
+        padding: 12px 25px;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .mobile {
+        display: block;
+    }
+    .tablet, .desktop {
+        display: none;
+    }
+
+    .hero-text h1 {
+        font-size: 28px;
+    }
+
+    .hero-text p {
+        font-size: 18px;
+    }
+
+    .news-cards, .player-cards, .shop-cards {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .news-card, .player-card, .shop-card {
+        width: 100%;
+    }
+
+    .cta-button {
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+
+    form button {
+        padding: 12px 25px;
+    }
+}

@@ -1,0 +1,324 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+}
+
+
+header {
+  background-color: #333;
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+header .logo a {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+header .nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+header .nav-links li {
+  margin-left: 25px;
+}
+
+header .nav-links a {
+  color: #fff;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 400;
+  transition: color 0.3s;
+}
+
+header .nav-links a:hover {
+  color: #ff6600;
+}
+
+
+.hero {
+  background: url('c.jpg') center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 800px;
+  z-index: 5;
+}
+
+.hero h1 {
+  font-size: 60px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+}
+
+.hero p {
+  font-size: 24px;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.cta-button {
+  padding: 15px 30px;
+  background-color: #ff6600;
+  color: white;
+  font-size: 18px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #e65c00;
+}
+
+.bike-image {
+  position: absolute;
+  background: url('Bicicleta.png') center/cover no-repeat;
+  width: 400px;
+  height: 400px;
+  bottom: -100px;
+  right: 50px;
+  border-radius: 50%;
+  animation: bikeAnimation 5s infinite;
+}
+
+
+@keyframes bikeAnimation {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(180deg); }
+}
+
+
+.section {
+  padding: 60px 0;
+}
+
+.bg-dark {
+  background-color: #634e4e;
+  color: #292525;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.news-cards, .events-cards, .shop-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.news-card, .event-card, .shop-item {
+  background-color: #fdf4ee;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.news-card img, .event-card img, .shop-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;  
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.news-card:hover, .event-card:hover, .shop-item:hover {
+  transform: translateY(-10px);
+}
+
+.news-card h3, .event-card h3, .shop-item h3 {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.news-card p, .event-card p, .shop-item p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.news-card a, .event-card a, .shop-item a {
+  font-size: 16px;
+  color: #ff6600;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.news-card a:hover, .event-card a:hover, .shop-item a:hover {
+  color: #e65c00;
+}
+
+
+section#contact form {
+  display: grid;
+  gap: 20px;
+}
+
+section#contact input, section#contact textarea {
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+section#contact button {
+  padding: 15px 30px;
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+section#contact button:hover {
+  background-color: #e65c00;
+}
+
+
+@media (max-width: 768px) {
+  
+  .hero {
+      background-position: center top; 
+      height: 80vh; 
+  }
+
+  .hero h1 {
+      font-size: 40px; 
+  }
+
+  .hero p {
+      font-size: 18px; 
+  }
+
+  .bike-image {
+      display: none; 
+  }
+
+ 
+  .news-cards, .events-cards, .shop-items {
+      grid-template-columns: 1fr; 
+      gap: 20px; 
+  }
+
+  
+  .news-card, .event-card, .shop-item {
+      padding: 15px; 
+  }
+
+  .news-card h3, .event-card h3, .shop-item h3 {
+      font-size: 10px; 
+  }
+
+  .news-card p, .event-card p, .shop-item p {
+      font-size: 9px; 
+  }
+
+ 
+  section#contact form {
+      gap: 15px; 
+  }
+
+  section#contact input, section#contact textarea {
+      padding: 12px; 
+  }
+
+  section#contact button {
+      padding: 12px 25px; 
+  }
+
+}
+  
+
+@media (max-width: 1024px) {
+  
+  .news-cards, .events-cards, .shop-items {
+      grid-template-columns: repeat(2, 1fr); 
+      gap: 20px; 
+  }
+
+  .hero h1 {
+      font-size: 50px; 
+  }
+
+  .hero p {
+      font-size: 22px; 
+  }
+
+  .bike-image {
+      width: 350px; 
+      height: 350px; 
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

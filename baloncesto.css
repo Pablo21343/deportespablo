@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+body {
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+  margin: 0;
+  padding: 0;
+  background-image: url('baloncestoig.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; 
+  background-repeat: no-repeat;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: auto; 
+  scroll-behavior: smooth; 
+}
+
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+.texto-centro {
+  text-align: center;
+}
+
+.contenedor {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 1;
+  position: relative;
+}
+
+
+.basketball-section {
+  background: rgba(207, 230, 231, 0.8); 
+  border-radius: 15px;
+  padding: 30px;
+  margin: 30px 0;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.basketball-section:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  background-color: rgba(207, 230, 231, 1); 
+}
+
+.carousel-image {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+  transition: transform 0.5s ease;
+}
+
+.carousel-image:hover {
+  transform: scale(1.05);
+}
+
+.news-card h2 {
+  color: #4DAF7C;
+  margin: 15px 0;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.news-card p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.details {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards; 
+}
+
+.details h2 {
+  color: #4DAF7C;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.details p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@media (min-width: 1024px) {
+  .container {
+    display: flex;
+    flex-direction: row;  
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    animation: fadeIn 1s ease-out forwards;
+  }
+
+  .basketball-section {
+    margin: 40px 0;
+    padding: 40px;
+  }
+}
+
+
+@media (max-width: 1024px) and (min-width: 600px) {
+  .container {
+    display: block; 
+    padding: 15px;
+  }
+
+  .basketball-section {
+    margin: 20px 0;
+    padding: 20px;
+  }
+
+  .carousel-image {
+    width: 100%;
+    max-width: 90%;
+    height: auto;
+  }
+}
+
+
+@media (max-width: 600px) {
+  body {
+    padding: 10px; 
+    position: relative;
+    overflow-y: scroll; 
+  }
+
+  .container {
+    padding: 5px; 
+  }
+
+  .basketball-section {
+    margin: 10px 0;
+    padding: 15px;
+    font-size: 14px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .carousel-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .details {
+    padding: 15px;
+  }
+
+  .details h2 {
+    font-size: 1.2rem;
+  }
+
+  
+  .basketball-section:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+
+  .container {
+    animation: fadeInMobile 0.7s ease-out forwards;
+  }
+
+  @keyframes fadeInMobile {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

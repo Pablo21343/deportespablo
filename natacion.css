@@ -1,0 +1,272 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+}
+
+
+header {
+  background-color: #006994;
+  padding: 20px 0;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo a {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+header .nav-links {
+  list-style: none;
+  display: flex;
+}
+
+header .nav-links li {
+  margin-left: 25px;
+}
+
+header .nav-links a {
+  color: #fff;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 400;
+  transition: color 0.3s;
+}
+
+header .nav-links a:hover {
+  color: #ff9900;
+}
+
+
+.hero {
+  background: url('natacion.jpg') center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+.hero-content h1 {
+  font-size: 60px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  font-size: 22px;
+  margin-bottom: 40px;
+}
+
+.cta-button {
+  padding: 15px 30px;
+  background-color: #ff9900;
+  color: white;
+  font-size: 18px;
+  border-radius: 25px;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #cc7a00;
+  transform: translateY(-3px);
+}
+
+
+.section {
+  padding: 60px 0;
+}
+
+.bg-light {
+  background-color: #f4f4f4;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+
+.news-grid, .athletes-grid, .shop-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.news-card, .athlete-card, .shop-item {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.news-card img, .athlete-card img, .shop-item img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.news-card:hover, .athlete-card:hover, .shop-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+@media (max-width: 768px) {
+ 
+  header nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header .nav-links {
+    display: block;
+    margin-top: 10px;
+  }
+
+  header .nav-links li {
+    margin-left: 0;
+    margin-bottom: 15px;
+  }
+
+ 
+  .hero {
+    height: 70vh; 
+    padding: 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 45px;
+    margin-bottom: 15px;
+  }
+
+  .hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+
+  .cta-button {
+    font-size: 16px;
+    padding: 12px 25px;
+  }
+
+ 
+  .news-grid, .athletes-grid, .shop-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .news-card, .athlete-card, .shop-item {
+    padding: 15px;
+  }
+
+ 
+  .section {
+    padding: 40px 0;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+}
+
+
+@media (max-width: 1024px) {
+  
+  header nav {
+    flex-direction: row;
+  }
+
+ 
+  .hero {
+    height: 80vh;
+  }
+
+  .hero-content h1 {
+    font-size: 55px;
+  }
+
+  .hero-content p {
+    font-size: 20px;
+  }
+
+  .cta-button {
+    font-size: 17px;
+    padding: 13px 28px;
+  }
+
+ 
+  .news-grid, .athletes-grid, .shop-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .hero {
+    height: 60vh;
+  }
+
+  .hero-content h1 {
+    font-size: 35px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .cta-button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+ 
+  .news-grid, .athletes-grid, .shop-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .news-card, .athlete-card, .shop-item {
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+}
+
+
